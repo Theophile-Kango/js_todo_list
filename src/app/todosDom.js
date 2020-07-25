@@ -87,7 +87,7 @@ const createButtonsDom = (elt, values, todoList, projectName, n) => {
                       <strong>Description:</strong> ${description}<br> 
                       <strong>Due:</strong> ${date}<br>
                       <strong>Priority:</strong> ${priority}`;
-  content.classList.add('mb-3', 'd-flex', 'border', 'border-dark', 'p-3', 'content');
+  content.classList.add('mb-3', 'd-flex', 'border', 'border-dark', 'p-3', 'content', 'col-sm-6', 'col-xs');
   todoList.classList.add('flex-column', 'align-items-center');
   todoName.classList.add('mr-3');
   todoList.appendChild(content);
