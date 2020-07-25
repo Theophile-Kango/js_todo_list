@@ -18,7 +18,7 @@ When you open the app, you will see three buttons
 
 ## Live Demo
 
-[Click for live webpage](https://polar-coast-33464.herokuapp.com/)
+[Click for live webpage](https://js-todo-list-app.netlify.app/)
 
 ## Built With
 
