@@ -50,9 +50,13 @@ const todoComplete = (elt, values, n) => {
     if (values[values.indexOf(elt)].complete) {
       values[values.indexOf(elt)].complete = false;
       button.textContent = 'Not Complete';
+      button.classList.remove('btn','btn-success');
+      button.classList.add('btn','btn-warning');
     } else {
       values[values.indexOf(elt)].complete = true;
       button.textContent = 'Complete';
+      button.classList.remove('btn','btn-warning');
+      button.classList.add('btn','btn-success');
     }
     setComplete(values);
   });
@@ -71,7 +75,7 @@ const createButtonsDom = (elt, values, todoList, projectName, n) => {
   const todoName = document.createElement('p');
   const button = document.createElement('button');
   button.setAttribute('id', `button-complete${n}`);
-  button.classList.add('btn', 'btn-success', 'buttons', 'mr-3', 'complete-button');
+  button.classList.add('buttons', 'mr-3', 'complete-button');
   const editButton = document.createElement('button');
   editButton.setAttribute('id', `button-edit${n}`);
   editButton.classList.add('btn', 'btn-info', 'buttons', 'mr-3');
@@ -100,7 +104,11 @@ const createButtonsDom = (elt, values, todoList, projectName, n) => {
   deleteButton.textContent = 'Delete';
   if (values[values.indexOf(elt)].complete) {
     button.textContent = 'Complete';
+    button.classList.remove('btn', "btn-warning");
+    button.classList.add('btn', "btn-success");
   } else {
+    button.classList.remove('btn', "btn-success");
+    button.classList.add('btn', "btn-warning");
     button.textContent = 'Not Complete';
   }
   return n;
